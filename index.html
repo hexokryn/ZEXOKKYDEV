@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafa">
+  <meta name="description" content="zexokky, aka hexokryn. Coding, Social Engineering, Information Security, System Administration. Telegram: @zexokkydev.">
+  <meta property="og:title" content="zexokky | aka hexokryn">
+  <meta property="og:description" content="Coding. Security. Systems. Личный сайт и публикации из Telegram.">
+  <meta property="og:type" content="website">
+  <title>zexokky | aka hexokryn</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">К содержимому</a>
+  <div class="page">
+    <header>
+      <a class="wordmark" href="#" aria-label="zexokky — главная">z.</a>
+      <nav aria-label="Основная навигация">
+        <a href="#about">Обо мне</a>
+        <a href="#telegram">Публикации</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="intro" aria-labelledby="name">
+        <p class="eyebrow">PERSONAL WEBSITE</p>
+        <h1 id="name">zexokky<span>.</span></h1>
+        <p class="alias" id="alias">aka hexokryn</p>
+        <p class="intro-text" id="intro-text">Код, безопасность и системы.</p>
+        <a class="primary-link" href="https://t.me/zexokkydev" target="_blank" rel="noopener noreferrer">Telegram <span aria-hidden="true">↗</span></a>
+      </section>
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <h2 id="about-title">Обо мне</h2>
+        <div class="section-body">
+          <p id="about-text">Я zexokky, также известен как hexokryn. Мои направления:</p>
+          <ul class="topics" id="topics">
+            <li>Coding</li>
+            <li>Social Engineering</li>
+            <li>Information Security</li>
+            <li>System Administration</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section feed" id="telegram" aria-labelledby="feed-title">
+        <div class="feed-heading">
+          <h2 id="feed-title">Публикации</h2>
+          <a href="https://t.me/zexokkydev" target="_blank" rel="noopener noreferrer">@zexokkydev <span aria-hidden="true">↗</span></a>
+        </div>
+        <p id="feed-status" class="feed-status" role="status" aria-live="polite">Загружаем ленту…</p>
+        <div id="posts" aria-busy="true"></div>
+        <div id="feed-empty" hidden>
+          <p>Свежие записи — в Telegram.</p>
+          <a class="underlined" href="https://t.me/zexokkydev" target="_blank" rel="noopener noreferrer">Открыть канал <span aria-hidden="true">↗</span></a>
+        </div>
+        <noscript><p>Публикации доступны в <a class="underlined" href="https://t.me/zexokkydev">Telegram-канале</a>.</p></noscript>
+      </section>
+    </main>
+    <footer>
+      <span>© <span id="year">2026</span> zexokky</span>
+      <button id="copy-handle" type="button">Скопировать Telegram</button>
+      <span id="copy-status" role="status" aria-live="polite"></span>
+    </footer>
+  </div>
+</body>
+</html>
