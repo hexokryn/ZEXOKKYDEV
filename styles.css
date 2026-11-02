@@ -65,3 +65,5 @@ footer button { border: 0; background: none; padding: 0; font-size: 11px; }
   footer button { font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }
+
+.arrow { display: inline-block; width: 1em; height: 1em; vertical-align: -.1em; fill: none; stroke: currentColor; stroke-width: 1.5; }

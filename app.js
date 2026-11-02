@@ -22,7 +22,15 @@ function renderPost(post) {
   }
   const text = typeof post.text === 'string' ? post.text : '';
   card.append(element('p', text ? (text.length > 900 ? `${text.slice(0, 900)}…` : text) : 'Медиа-публикация'));
-  const link = element('a', 'Читать в Telegram ↗');
+  const link = element('a', 'Читать в Telegram');
+  const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  arrow.setAttribute('class', 'arrow');
+  arrow.setAttribute('viewBox', '0 0 24 24');
+  arrow.setAttribute('aria-hidden', 'true');
+  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('d', 'M5 19 19 5M5 5h14v14');
+  arrow.append(path);
+  link.append(' ', arrow);
   link.href = url.href;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
