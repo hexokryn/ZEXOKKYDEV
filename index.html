@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#000000">
   <meta name="description" content="zexokky, aka hexokryn. Coding, Social Engineering, Information Security, System Administration. Telegram: @zexokkydev.">
   <meta property="og:title" content="zexokky | aka hexokryn">
   <meta property="og:description" content="Coding. Security. Systems. Личный сайт и публикации из Telegram.">
@@ -24,6 +24,7 @@
       </nav>
     </header>
     <main id="main">
+      <div class="profile">
       <section class="intro" aria-labelledby="name">
         <p class="eyebrow">PERSONAL WEBSITE</p>
         <h1 id="name">zexokky<span>.</span></h1>
@@ -43,13 +44,14 @@
           </ul>
         </div>
       </section>
+      </div>
       <section class="section feed" id="telegram" aria-labelledby="feed-title">
         <div class="feed-heading">
           <h2 id="feed-title">Публикации</h2>
           <a href="https://t.me/zexokkydev" target="_blank" rel="noopener noreferrer">@zexokkydev <span aria-hidden="true"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
         </div>
         <p id="feed-status" class="feed-status" role="status" aria-live="polite">Загружаем ленту…</p>
-        <div id="posts" aria-busy="true"></div>
+        <div id="posts" role="region" aria-label="Публикации Telegram — прокрутка внутри окна" tabindex="0" aria-busy="true"></div>
         <div id="feed-empty" hidden>
           <p>Свежие записи — в Telegram.</p>
           <a class="underlined" href="https://t.me/zexokkydev" target="_blank" rel="noopener noreferrer">Открыть канал <span aria-hidden="true"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>

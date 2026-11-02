@@ -14,6 +14,7 @@ function renderPost(post) {
   if (url.protocol !== 'https:' || url.hostname !== 't.me' || url.username || url.password || !/^\/zexokkydev\/\d+$/.test(url.pathname)) return null;
   const card = document.createElement('article');
   card.className = 'post';
+  card.dataset.postId = url.pathname.split('/').pop();
   const date = new Date(post.date);
   if (!Number.isNaN(date.getTime())) {
     const time = element('time', new Intl.DateTimeFormat('ru', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Moscow' }).format(date));
@@ -44,7 +45,9 @@ async function loadPosts() {
     if (!response.ok) throw new Error('Feed unavailable');
     const feed = await response.json();
     if (!Array.isArray(feed.posts)) throw new Error('Invalid feed');
-    const cards = feed.posts.slice(0, 9).map(renderPost).filter(Boolean);
+    const cards = feed.posts.map(renderPost).filter(Boolean)
+      .sort((a, b) => Number(a.dataset.postId) - Number(b.dataset.postId))
+      .slice(-9);
     if (!cards.length) throw new Error('No posts');
     posts.replaceChildren(...cards);
     document.getElementById('feed-empty').hidden = true;

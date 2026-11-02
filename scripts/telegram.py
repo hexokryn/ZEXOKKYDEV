@@ -76,7 +76,7 @@ def parse_posts(html):
         date = next((el.attrs.get('datetime', '') for el in descendants if el.tag == 'time'), '')
         # Media-only messages still link to the original post.
         posts[post_id] = {'id': int(post_id.split('/')[1]), 'url': f'https://t.me/{post_id}', 'text': text, 'date': date}
-    return sorted(posts.values(), key=lambda post: post['id'], reverse=True)[:9]
+    return sorted(posts.values(), key=lambda post: post['id'])[-9:]
 
 
 def fetch_posts():

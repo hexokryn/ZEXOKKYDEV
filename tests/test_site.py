@@ -17,17 +17,17 @@ PAGE = '''<div class="tgme_widget_message_wrap"><div class="tgme_widget_message 
 class FeedTests(unittest.TestCase):
     def test_public_feed_text_dates_media_and_channel_filter(self):
         posts = parse_posts(PAGE)
-        self.assertEqual([post['id'] for post in posts], [13, 12])
-        self.assertEqual(posts[1]['text'], 'Первый пост\nКод & системы ссылка')
-        self.assertEqual(posts[1]['url'], 'https://t.me/zexokkydev/12')
-        self.assertEqual(posts[0]['text'], '')
-        self.assertEqual(posts[1]['date'], '2026-11-03T10:00:00+00:00')
+        self.assertEqual([post['id'] for post in posts], [12, 13])
+        self.assertEqual(posts[0]['text'], 'Первый пост\nКод & системы ссылка')
+        self.assertEqual(posts[0]['url'], 'https://t.me/zexokkydev/12')
+        self.assertEqual(posts[1]['text'], '')
+        self.assertEqual(posts[0]['date'], '2026-11-03T10:00:00+00:00')
 
     def test_deduplication_and_limit(self):
         html = ''.join(f'<div class="tgme_widget_message" data-post="zexokkydev/{i}"></div>' for i in range(15))
         posts = parse_posts(html + html)
         self.assertEqual(len(posts), 9)
-        self.assertEqual(posts[0]['id'], 14)
+        self.assertEqual([post['id'] for post in posts], list(range(6, 15)))
 
     def test_save_and_empty_feed_protection(self):
         with tempfile.TemporaryDirectory() as directory:
