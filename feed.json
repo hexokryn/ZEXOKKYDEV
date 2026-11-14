@@ -1,12 +1,6 @@
 {
-  "updated_at": "2026-11-14T20:16:01.866915+00:00",
+  "updated_at": "2026-11-14T20:53:34.691814+00:00",
   "posts": [
-    {
-      "id": 26,
-      "url": "https://t.me/zexokkydev/26",
-      "text": "│\n├── about/\n│   ├── os        → Kali Linux ; Windows\n│   └── code      → vibecode\n│\n├── projects/\n│   ├── Client for Minecraft\n│   ├── Cheat for dota&cs2\n│   └── Cheat client for Minecraft\n│\n├── created/\n│   ├── ByteCheck\n│   ├── loader\n│   └── site\n│\n└──────────────────────────────────────",
-      "date": "2026-10-18T19:35:37+00:00"
-    },
     {
       "id": 28,
       "url": "https://t.me/zexokkydev/28",
@@ -54,6 +48,12 @@
       "url": "https://t.me/zexokkydev/37",
       "text": "🏃‍♀️⚠️🏃‍♀️⚠️🏃‍♀️⚠️🏃‍♀️⚠️🏃‍♀️⚠️🏃‍♀️⚠️🏃‍♀️\n✅Создан ByteCheck\n🔸Это сервис для проверки файлов на вирусы(аналог virustotal) он работает как на Windows так и на android.\n⚠️⚠️⚠️⚠️⚠️⚠️Link⚠️⚠️⚠️⚠️⚠️⚠️",
       "date": ""
+    },
+    {
+      "id": 38,
+      "url": "https://t.me/zexokkydev/38",
+      "text": "💬Давать промт на гптшку?",
+      "date": "2026-11-14T20:40:07+00:00"
     }
   ]
 }
